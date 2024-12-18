@@ -1,14 +1,17 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFonts from "next/font/local"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const Gilroy = localFonts({
+  src: "./fonts/Gilroy-Medium.e7e7c091.ttf",
+  variable: "--font-Gilroy",
+  weight: "100-900",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const Rimons = localFonts({
+  src:"./fonts/RIMONS.otf",
+  variable: "--font-Rimons",
+  weight:"100-900",
 });
 
 export const metadata = {
@@ -20,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${Gilroy.variable} ${Rimons.variable} antialiased`}
       >
         {children}
       </body>

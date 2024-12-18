@@ -11,6 +11,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        Rimons: ["var(--font-Rimons)"],
+        Gilroy: ["var(--font-Gilroy)"],
+      }
     },
   },
   plugins: [],
