@@ -203,22 +203,23 @@ const AnimatedHeroAndAbout = () => {
                     <div ref={heroRefs.container} className="relative h-full overflow-hidden">
                         <div ref={heroRefs.overlay} className="absolute inset-0 bg-black z-20" />
                         <video
-                            ref={heroRefs.video1}
+                        ref={heroRefs.video1}
                             autoPlay
                             loop
                             muted
                             playsInline
-                            className="absolute top-0 left-0 w-1/2 h-full object-cover"
+                            className="fixed top-0 left-0 w-1/2 h-full object-cover"
                             style={{ opacity: isVideo1Playing ? 1 : 0 }}
                         >
                             <source src="/videos/video1.mp4" type="video/mp4" />
                         </video>
+
                         <video
                             ref={heroRefs.video2}
                             autoPlay
                             muted
                             playsInline
-                            className="absolute top-0 right-0 w-1/2 h-full object-cover"
+                            className="fixed top-0 right-0 w-1/2 h-full object-cover"
                             style={{ opacity: isVideo1Playing ? 0 : 1 }}
                             onClick={handleVideoClick}
                         >
