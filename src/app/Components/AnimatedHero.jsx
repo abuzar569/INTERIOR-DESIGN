@@ -7,6 +7,33 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedHeroAndAbout = () => {
+
+
+    useEffect(() => {
+        const videoElement = heroRefs.video2.current;
+    
+        const playVideo = () => {
+            if (videoElement && videoElement.paused) {
+                videoElement.play().catch((error) => {
+                    console.error("Video autoplay failed:", error);
+                });
+            }
+        };
+    
+        // Add event listeners for user interaction
+        window.addEventListener("touchstart", playVideo);
+        window.addEventListener("click", playVideo);
+    
+        return () => {
+            window.removeEventListener("touchstart", playVideo);
+            window.removeEventListener("click", playVideo);
+        };
+    }, []);
+    
+
+
+
+
     const containerRef = useRef(null);
     const sectionsRef = useRef([]);
 
@@ -208,6 +235,7 @@ const AnimatedHeroAndAbout = () => {
                             autoPlay
                             loop
                             muted
+                            playsInline
                             id="current-video"
                             className="fixed top-0 left-0 w-1/2 h-full object-cover"
                         />
@@ -218,6 +246,7 @@ const AnimatedHeroAndAbout = () => {
                             autoPlay
                             loop
                             muted
+                            playsInline
                             id="current-video"
                             className="fixed top-0 right-0 w-1/2 h-full object-cover"
                         />
