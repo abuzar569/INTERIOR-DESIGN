@@ -27,7 +27,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body
         className={`${Gilroy.variable} ${Aghita.variable} ${Rimons.variable} antialiased`}
       >

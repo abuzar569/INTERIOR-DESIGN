@@ -4,6 +4,9 @@ import AnimatedHero from "./Components/AnimatedHero";
 import Services from "./Components/Service";
 import ScrollAniamtion from "./Components/ScrollAnimation";
 import Project from "./Components/Project";
+import Cursor from "./Components/Cursor";
+import Testimonial from "./Components/Testimonial";
+
 
 
 
@@ -11,11 +14,13 @@ import Project from "./Components/Project";
 export default function Home() {
   return (
    <div>
+    <Cursor />
     <AnimatedNavbar />
     <AnimatedHero />
     <Services />
     <ScrollAniamtion />
     <Project />
+    <Testimonial/>
    </div>
   );
 }

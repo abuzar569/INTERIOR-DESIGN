@@ -19,6 +19,35 @@ body {
   scroll-behavior: smooth;
 }
 
-video{
-  filter: blur(10px);
+
+/* Custom Cursor Styles */
+
+/* Base styles for the custom cursor */
+.custom-cursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ff6347; /* Attractive color */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  mix-blend-mode: difference;
 }
+
+/* Enlarge the cursor on hover */
+.custom-cursor.hovering {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 99, 71, 0.2); /* Transparent effect */
+  border: 2px solid rgba(255, 99, 71, 0.6);
+}
+
+/* Hide the cursor on smaller devices */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+

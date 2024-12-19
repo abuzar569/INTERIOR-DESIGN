@@ -12,18 +12,34 @@ const Project = () => {
   useEffect(() => {
     const projects = gsap.utils.toArray(".project");
 
+    // Iterate through all projects
     projects.forEach((project, index) => {
       ScrollTrigger.create({
         trigger: project,
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: false,
-        scrub: true,
-        markers: false, // Enable this for debugging
+        start: "top top", // Start when the top of the project hits the top of the viewport
+        end: "bottom top", // End when the bottom of the project hits the top of the viewport
+        pin: index !== projects.length - 1, // Pin all but the last project
+        pinSpacing: false, // Prevent extra spacing
+        scrub: true, // Smooth scrubbing effect
+        markers: false, // Disable markers (you can enable for debugging)
       });
     });
 
+    // Scroll animation for the last project to scroll up
+    const lastProject = projects[projects.length - 1];
+    gsap.to(lastProject, {
+      y: "-100%", // Scroll up effect for the last project
+      ease: "none",
+      scrollTrigger: {
+        trigger: lastProject,
+        start: "top bottom", // Start when the top of the last project hits the bottom of the viewport
+        end: "bottom top", // End when the bottom of the last project hits the top of the viewport
+        scrub: true, // Smooth scrubbing effect
+        markers: false, // Disable markers (you can enable for debugging)
+      },
+    });
+
+    // Cleanup ScrollTrigger instances on unmount
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -31,42 +47,42 @@ const Project = () => {
 
   const projects = [
     {
-        title: "Luxury Abode",
-        subtitle: "Elegance in Every Detail",
-        image: "/Project1.jpg",
-        gradient: "from-indigo-500/50 to-teal-500/50",
-      },
-      {
-        title: "Urban Retreat",
-        subtitle: "Modern Living Redefined",
-        image: "/Project2.jpg",
-        gradient: "from-green-500/50 to-yellow-500/50",
-      },
-      {
-        title: "Eco Bliss",
-        subtitle: "Harmony with Nature",
-        image: "/Project3.jpg",
-        gradient: "from-orange-500/50 to-purple-500/50",
-      },
-      {
-        title: "Bold Perspectives",
-        subtitle: "Innovative Designs",
-        image: "/Project4.jpg",
-        gradient: "from-pink-500/50 to-red-500/50",
-      },
-      {
-        title: "Timeless Charm",
-        subtitle: "Classic Meets Contemporary",
-        image: "/Project5.jpg",
-        gradient: "from-blue-500/50 to-gray-500/50",
-      },
-      {
-        title: "Visionary Spaces",
-        subtitle: "Architectural Masterpieces",
-        image: "/Project6.jpg",
-        gradient: "from-cyan-500/50 to-lime-500/50",
-      },
-    ];
+      title: "Luxury Abode",
+      subtitle: "Elegance in Every Detail",
+      image: "/Project1.jpg",
+      gradient: "from-indigo-500/50 to-teal-500/50",
+    },
+    {
+      title: "Urban Retreat",
+      subtitle: "Modern Living Redefined",
+      image: "/Project2.jpg",
+      gradient: "from-green-500/50 to-yellow-500/50",
+    },
+    {
+      title: "Eco Bliss",
+      subtitle: "Harmony with Nature",
+      image: "/Project3.jpg",
+      gradient: "from-orange-500/50 to-purple-500/50",
+    },
+    {
+      title: "Bold Perspectives",
+      subtitle: "Innovative Designs",
+      image: "/Project4.jpg",
+      gradient: "from-pink-500/50 to-red-500/50",
+    },
+    {
+      title: "Timeless Charm",
+      subtitle: "Classic Meets Contemporary",
+      image: "/Project5.jpg",
+      gradient: "from-blue-500/50 to-gray-500/50",
+    },
+    {
+      title: "Visionary Spaces",
+      subtitle: "Architectural Masterpieces",
+      image: "/Project6.jpg",
+      gradient: "from-cyan-500/50 to-lime-500/50",
+    },
+  ];
 
   return (
     <div ref={containerRef} className="overflow-hidden">

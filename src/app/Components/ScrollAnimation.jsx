@@ -65,8 +65,10 @@ const ScrollAnimation = () => {
 
   return (
     <div ref={containerRef} className="h-[150vh] overflow-hidden">
-      <h1 className=' text-6xl bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent font-Rimons mb-10 text-center'>Gallery</h1>
-      <div className=" top-0 h-screen flex items-center justify-center overflow-hidden relative">
+      <h1 className="text-6xl md:text-8xl bg-gradient-to-r from-emerald-500 to-emerald-700 bg-clip-text text-transparent font-Rimons mb-10 text-center">
+        Gallery
+      </h1>
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
           ref={imageRef}
           src="/Image1.jpg"
@@ -75,13 +77,13 @@ const ScrollAnimation = () => {
         />
         <div
           ref={gridRef}
-          className="absolute inset-0 flex justify-center items-end pb-20 opacity-0 translate-y-full"
+          className="absolute inset-0 flex justify-center items-end pb-10 md:pb-20 opacity-0 translate-y-full transition-all"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6">
             {[2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
               <div
                 key={num}
-                className="grid-item w-40 h-40 bg-gradient-to-tr from-gray-700 to-gray-900 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out relative"
+                className="grid-item w-full h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gradient-to-tr from-gray-700 to-gray-900 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out relative"
               >
                 <img
                   src={`/Image${num}.jpg`}
