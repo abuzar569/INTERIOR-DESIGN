@@ -19,3 +19,6 @@ body {
   scroll-behavior: smooth;
 }
 
+video{
+  filter: blur(10px);
+}

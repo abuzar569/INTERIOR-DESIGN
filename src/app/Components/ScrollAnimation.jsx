@@ -65,7 +65,7 @@ const ScrollAnimation = () => {
 
   return (
     <div ref={containerRef} className="h-[150vh] overflow-hidden">
-      <h1 className=' text-6xl text-black font-Gilroy mb-10 text-center'>Gallery</h1>
+      <h1 className=' text-6xl bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent font-Rimons mb-10 text-center'>Gallery</h1>
       <div className=" top-0 h-screen flex items-center justify-center overflow-hidden relative">
         <img
           ref={imageRef}

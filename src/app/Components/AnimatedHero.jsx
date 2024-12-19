@@ -227,7 +227,9 @@ const AnimatedHeroAndAbout = () => {
                     ref={el => (sectionsRef.current[0] = el)}
                     className="section w-screen h-full flex-shrink-0 relative bg-black"
                 >
+                   
                     <div ref={heroRefs.container} className="relative h-full overflow-hidden">
+                  
                         <div ref={heroRefs.overlay} className="absolute inset-0 bg-black z-20" />
                         <video
                             ref={heroRefs.video1}
@@ -237,9 +239,9 @@ const AnimatedHeroAndAbout = () => {
                             muted
                             playsInline
                             id="current-video"
-                            className="fixed top-0 left-0 w-1/2 h-full object-cover"
+                            className="video fixed top-0 left-0 w-1/2 h-full object-cover"
+                            
                         />
-
                         <video
                             ref={heroRefs.video2}
                             src="/Videos/Video2.mp4"
@@ -254,17 +256,18 @@ const AnimatedHeroAndAbout = () => {
                             ref={heroRefs.textWrapper}
                             className="absolute z-30 inset-0 flex flex-col items-center justify-center text-white text-center px-4"
                         >
+                              <div className="absolute inset-0 bg-black bg-opacity-65" />
                             <h1
                                 ref={heroRefs.title}
-                                className="text-6xl md:text-7xl font-bold tracking-wide uppercase font-Rimons transform hover:scale-105 transition-transform duration-300"
+                                className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent tracking-wide uppercase font-Aghita transform hover:scale-105 transition-transform duration-300"
                             >
-                                <span className=' text-emerald-700'>El-</span>Intero
+                                El-Intero
                             </h1>
                             <p
                                 ref={heroRefs.subtitle}
                                 className="text-2xl md:text-3xl mt-4 opacity-80 hover:opacity-100 mb-6 font-Gilroy transition-opacity duration-300"
                             >
-                                Transforming <span className=' text-emerald-600'>Spaces</span>, Crafting <span className=' text-emerald-600'>Experiences</span>
+                                Transforming <span className=' bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent '>Spaces</span>, Crafting <span className='bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent '>Experiences</span>
                             </p>
                             <button
                                 ref={heroRefs.btn}
@@ -282,6 +285,7 @@ const AnimatedHeroAndAbout = () => {
                                     ></path>
                                 </svg>
                             </button>
+                            
                         </div>
                     </div>
                 </section>
@@ -302,7 +306,7 @@ const AnimatedHeroAndAbout = () => {
                                 backgroundImage: 'url("/BG1.jpg")',
                             }}
                         />
-                        <div className="absolute inset-0 bg-black bg-opacity-40" />
+                        <div className="absolute inset-0 bg-black bg-opacity-65" />
 
                         <div
                             ref={aboutRefs.contentWrapper}
@@ -313,13 +317,13 @@ const AnimatedHeroAndAbout = () => {
                                     ref={aboutRefs.heading}
                                     className="text-4xl sm:text-5xl md:text-6xl font-Gilroy font-bold mb-6 tracking-wide"
                                 >
-                                    About <span className='font-Rimons text-emerald-600'>El-</span><span className='font-Rimons'>Intero</span>
-                                </h1>
+                                    About <span className='font-Aghita bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent '>El-Intero</span>
+                               </h1>
                                 <h2
                                     ref={aboutRefs.subHeading}
                                     className="text-xl sm:text-2xl font-Gilroy md:text-3xl mb-6 opacity-80"
                                 >
-                                    Designing <span className=' text-emerald-600'>Dreams</span>, Crafting <span className=' text-emerald-600'>Realities</span>
+                                    Designing <span className=' bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent '>Dreams</span>, Crafting <span className=' bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent '>Realities</span>
                                 </h2>
                                 <p
                                     ref={aboutRefs.paragraph}
@@ -330,7 +334,7 @@ const AnimatedHeroAndAbout = () => {
                                 </p>
                                 <button
                                     ref={heroRefs.btn}
-                                    className="flex justify-center gap-2 items-center shadow-xl text-lg backdrop-blur-md font-Gilroy isolation-auto text-emerald-600 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                                    className="flex mx-auto justify-center gap-2 items-center shadow-xl text-lg backdrop-blur-md font-Gilroy isolation-auto text-emerald-600 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
                                 >
                                     View all services
                                     <svg

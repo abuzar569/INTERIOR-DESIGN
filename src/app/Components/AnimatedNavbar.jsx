@@ -54,18 +54,19 @@ const AnimatedNavbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
+    
   }
 
   return (
     <nav
       ref={navRef}
-      className="navbar fixed top-0 left-0 w-full z-50 text-white bg-emerald-800 "
+      className="navbar fixed top-0 left-0 w-full z-50 text-white bg-gradient-to-r from-emerald-300 to-emerald-500 "
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-3xl font-bold font-Rimons tracking-wider"> <span className=''> EL-</span>INTERO</div>
+        <div className="text-3xl font-bold font-Aghita text-emerald-950 tracking-wider">EL-INTERO</div>
         <button
           onClick={toggleMenu}
-          className="z-50 focus:outline-none"
+          className="z-50 focus:outline-none text-emerald-950"
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -81,7 +82,7 @@ const AnimatedNavbar = () => {
             <li key={index} className="overflow-hidden">
               <a
                 href={link.href}
-                className="menu-link text-4xl font-Gilroy text-white font-bold hover:text-emerald-800 transition-colors duration-300 inline-block opacity-0 transform translate-y-8"
+                className="menu-link text-4xl font-Aghita text-white font-bold hover:text-emerald-800 transition-colors duration-300 inline-block opacity-0 transform translate-y-8"
                 onClick={toggleMenu}
               >
                 {link.name}

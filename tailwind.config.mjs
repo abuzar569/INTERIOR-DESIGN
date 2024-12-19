@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         Rimons: ["var(--font-Rimons)"],
         Gilroy: ["var(--font-Gilroy)"],
+        Aghita: ["var(--font-Aghita)"],
       }
     },
   },
