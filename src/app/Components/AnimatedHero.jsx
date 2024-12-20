@@ -315,7 +315,7 @@ const AnimatedHeroAndAbout = () => {
                             <div className="max-w-2xl text-center w-full">
                                 <h1
                                     ref={aboutRefs.heading}
-                                    className="text-4xl sm:text-5xl md:text-6xl font-Gilroy font-bold mb-6 tracking-wide"
+                                    className="text-4xl sm:text-5xl md:text-6xl font-Gilroy mb-6 tracking-wide"
                                 >
                                     About <span className='font-Aghita bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent '>El-Intero</span>
                                </h1>

@@ -64,7 +64,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <div ref={testimonialsRef} className="h-screen py-40 px-4 bg-gray-100">
+    <div ref={testimonialsRef} className="py-40 px-4 bg-gray-50">
       <h2 className="section-header text-center text-6xl md:text-8xl bg-gradient-to-r from-emerald-500 to-emerald-700 bg-clip-text text-transparent font-Rimons mb-12">
         What Our Clients Say
       </h2>

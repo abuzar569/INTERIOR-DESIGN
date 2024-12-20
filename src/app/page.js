@@ -6,6 +6,8 @@ import ScrollAniamtion from "./Components/ScrollAnimation";
 import Project from "./Components/Project";
 import Cursor from "./Components/Cursor";
 import Testimonial from "./Components/Testimonial";
+import AnimatedText from "./Components/AnimatedText";
+import Footer from "./Components/Footer";
 
 
 
@@ -21,6 +23,8 @@ export default function Home() {
     <ScrollAniamtion />
     <Project />
     <Testimonial/>
+    <AnimatedText />
+    {/* <Footer /> */}
    </div>
   );
 }
