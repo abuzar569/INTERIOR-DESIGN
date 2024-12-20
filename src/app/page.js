@@ -24,7 +24,7 @@ export default function Home() {
     <Project />
     <Testimonial/>
     <AnimatedText />
-    {/* <Footer /> */}
+    <Footer />
    </div>
   );
 }

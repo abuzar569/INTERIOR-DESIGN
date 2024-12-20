@@ -25,7 +25,7 @@ const AnimatedText = () => {
   }, []);
 
   return (
-    <div className="container font-Rimons">
+    <div className="Animate container font-Rimons">
       <h1 className="text">ELEVATE YOUR<span>SPACE</span></h1>
       <h1 className="text">DESIGN YOUR<span>DREAM HOME</span></h1>
       <h1 className="text">CREATE A<span>MASTERPIECE</span></h1>

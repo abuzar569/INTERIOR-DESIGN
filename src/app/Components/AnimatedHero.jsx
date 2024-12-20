@@ -317,7 +317,7 @@ const AnimatedHeroAndAbout = () => {
                                     ref={aboutRefs.heading}
                                     className="text-4xl sm:text-5xl md:text-6xl font-Gilroy mb-6 tracking-wide"
                                 >
-                                    About <span className='font-Aghita bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent '>El-Intero</span>
+                                    About  <span className=' font-Aghita bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent'>EL-INTERO</span>
                                </h1>
                                 <h2
                                     ref={aboutRefs.subHeading}
